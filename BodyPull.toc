@@ -1,0 +1,51 @@
+## Interface: 16001, 120105, 120100, 120001, 120000
+## Title: |cffe8b04aBody Pull|r
+## Notes: A turn-based dungeon puzzle: you can't push anything, only pull. Lead each pack to your party in as few steps as you can. Part of the Nether addon family.
+## Author: NetherUI
+## Version: 1.0.0
+## IconTexture: Interface\AddOns\BodyPull\Media\Icon
+## SavedVariables: BodyPullDB, NetherFamilyDB
+## OptionalDeps: NetherUI, NetherUI_Media, NetherSuite
+## X-License: All Rights Reserved
+## X-NetherSuite: 1
+## X-Nether-Family: 1
+## X-Nether-Order: 101
+## X-Nether-Description: A turn-based dungeon puzzle: lure, never push. Pull each pack to your party in as few steps as you can.
+
+# The Nether family's shared pieces (the same file in every Nether addon)
+NetherFamily.lua
+NetherSound.lua
+NetherChannels.lua
+NetherFont.lua
+
+# Core: namespace, saved data (per character by GUID), generated art manifest, art and sound access
+Core\Init.lua
+Data\Atlas.lua
+Core\Assets.lua
+Core\Audio.lua
+
+# The game: rules (no game API: the room tools run the same file), the rooms, this character's records
+Game\Rules.lua
+Game\Rooms_Candlewick.lua
+Game\Rooms_Blackbrine.lua
+Game\Rooms_Ashveil.lua
+Game\Rooms_Emberdeep.lua
+Game\Progress.lua
+Game\Daily.lua
+Game\Awards.lua
+
+# Scores shared with other players (replay-checked)
+Comm\Leaderboard.lua
+
+# Screens: the game's own controls, the board, the window and HUD, the minimap button
+UI\Widgets.lua
+UI\Board.lua
+UI\Window.lua
+UI\Extras.lua
+UI\Minimap.lua
+
+# The Nether family: settings, slash commands, NetherSuite tile, Esc > Options page
+Family\Family.lua
+Family\Skin.lua
+Family\Widgets.lua
+Family\Options.lua
